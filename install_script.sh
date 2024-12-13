@@ -1,12 +1,12 @@
 #!/bin/bash
 cd
 # Set date and time
-sudo timedatectl set-time "2024-12-03 15:30:00"
+#sudo timedatectl set-time "2024-12-03 15:30:00"
 
 sudo apt update
 sudo apt install network-manager
 sudo service NetworkManager start
-sudo nmcli device wifi connect 'agv_wireless_2.4GHz' password '123456789'
+#sudo nmcli device wifi connect 'agv_wireless_2.4GHz' password '123456789'
 
 # Update and upgrade system packages
 sudo apt-get update -y
@@ -51,4 +51,4 @@ make -j$(nproc)
 sudo make install
 sudo ldconfig
 cd jetson_inference/build/aarch64/bin/
-./detectnet.py /dev/video0
+#./detectnet.py /dev/video0
