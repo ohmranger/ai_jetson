@@ -1,13 +1,13 @@
 #!/bin/bash
-
+cd
 # Set date and time
 sudo timedatectl set-time "2024-12-03 15:30:00"
 
-# Install CUDA Toolkit 10.2
-sudo apt-get install -y cuda-toolkit-10-2
-
 # Update and upgrade system packages
 sudo apt-get update -y
+
+# Install CUDA Toolkit 10.2
+sudo apt-get install -y cuda-toolkit-10-2
 
 # Reinstall CUDA Toolkit 10.2 (if needed)
 sudo apt-get install -y cuda-toolkit-10-2
