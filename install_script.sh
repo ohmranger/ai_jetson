@@ -50,5 +50,5 @@ cmake ../
 make -j$(nproc)
 sudo make install
 sudo ldconfig
-cd jetson_inference/build/aarch64/bin/
-#./detectnet.py /dev/video0
+cd jetson-inference/build/aarch64/bin/
+./detectnet.py /dev/video0
