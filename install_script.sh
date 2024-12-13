@@ -3,6 +3,11 @@ cd
 # Set date and time
 sudo timedatectl set-time "2024-12-03 15:30:00"
 
+sudo apt update
+sudo apt install network-manager
+sudo service NetworkManager start
+sudo nmcli device wifi connect 'agv_wireless_2.4GHz' password '123456789'
+
 # Update and upgrade system packages
 sudo apt-get update -y
 
