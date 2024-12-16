@@ -8,6 +8,8 @@ sudo apt install network-manager
 sudo service NetworkManager start
 #sudo nmcli device wifi connect 'agv_wireless_2.4GHz' password '123456789'
 
+# Remove unnecessary software
+sudo apt remove -y thunderbird libreoffice-*
 # Update and upgrade system packages
 sudo apt-get update -y
 
@@ -24,8 +26,6 @@ sudo apt-get install -y nvidia-tensorrt
 sudo apt autoremove -y
 sudo apt clean -y
 
-# Remove unnecessary software
-sudo apt remove -y thunderbird libreoffice-*
 
 # Install essential development tools and libraries
 sudo apt-get install -y git cmake libpython3-dev python3-numpy
