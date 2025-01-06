@@ -89,19 +89,8 @@ sudo apt install ros-$name_ros_version-turtlebot3 -y
 cd ~/catkin_ws/src/
 git clone -b noetic https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 cd ~/catkin_ws && catkin_make
-sudo apt-get install ros-$name_ros_version-moveit -y
-mkdir -p ~/ws_moveit/src
-cd ~/ws_moveit/src
-git clone https://github.com/ros-planning/moveit_tutorials.git -b melodic-devel
-git clone https://github.com/ros-planning/panda_moveit_config.git -b melodic-devel
-cd ~/ws_moveit/src
-rosdep install -y --from-paths . --ignore-src --rosdistro melodic
-cd ~/ws_moveit
-catkin config --extend /opt/ros/${ROS_DISTRO} --cmake-args -DCMAKE_BUILD_TYPE=Release
-catkin build
 
-echo 'source ~/ws_moveit/devel/setup.bash' >> ~/.bashrc
-source ~/ws_moveit/devel/setup.bash
+sudo apt-get install ros-$name_ros_version-moveit -y
 
 # Clean up unused packages
 sudo apt autoremove -y
