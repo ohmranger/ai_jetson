@@ -1,6 +1,9 @@
 #!/bin/bash
 # Apache License 2.0
 # Copyright (c) 2020, ROBOTIS CO., LTD.
+#sudo timedatectl set-ntp false
+#sudo timedatectl set-time "2025-01-09 15:30:00"
+
 sudo rm -rf /usr/local/cuda/samples \
 /usr/src/cudnn_samples_* \
 /usr/src/tensorrt/data \
@@ -79,7 +82,25 @@ cd ~/catkin_ws/src/
 git clone -b noetic https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 cd ~/catkin_ws && catkin_make
 
+#install Moveit
+sudo apt-get install ros-melodic-catkin python-catkin-tools -y
+
 sudo apt-get install ros-$name_ros_version-moveit -y
+sudo apt-get install ros-melodic-franka-description -y
+sudo apt-get install ros-melodic-moveit-visual-tools -y
+sudo apt-get install ros-melodic-moveit-resources -y
+sudo apt-get install ros-melodic-joint-state-publisher -y
+mkdir -p ~/ws_moveit/src
+cd ~/ws_moveit/src
+git clone https://github.com/ros-planning/moveit_tutorials.git -b melodic-devel
+git clone https://github.com/ros-planning/panda_moveit_config.git -b melodic-devel
+cd ~/ws_moveit/src
+rosdep install -y --from-paths . --ignore-src --rosdistro melodic
+cd ~/ws_moveit
+catkin config --extend /opt/ros/${ROS_DISTRO} --cmake-args -DCMAKE_BUILD_TYPE=Release
+catkin build
+source ~/ws_moveit/devel/setup.bash
+echo 'source ~/ws_moveit/devel/setup.bash' >> ~/.bashrc
 
 # Clean up unused packages
 sudo apt autoremove -y
