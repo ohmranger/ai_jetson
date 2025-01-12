@@ -90,6 +90,31 @@ sudo apt-get install ros-melodic-franka-description -y
 sudo apt-get install ros-melodic-moveit-visual-tools -y
 sudo apt-get install ros-melodic-moveit-resources -y
 sudo apt-get install ros-melodic-joint-state-publisher -y
+sudo apt-get install ros-melodic-ur-msgs 
+sudo apt-get install ros-melodic-ur-dashboard-msgs 
+
+sudo apt-get install ros-melodic-trac-ik
+sudo apt-get install ros-melodic-ur-client-library
+sudo apt-get install ros-melodic-effort-controllers
+sudo apt-get install ros-melodic-warehouse-ros-mongo
+sudo apt-get install ros-melodic-velocity-controllers
+sudo apt-get install ros-melodic-twist-controller
+sudo apt-get install ros-melodic-industrial-robot-status
+sudo apt-get install ros-melodic-industrial-robot-status-controller
+sudo apt-get install ros-melodic-force-torque-sensor
+sudo apt-get install ros-melodic-force-torque-sensor-controller
+sudo apt-get install ros-melodic-cartesian-trajectory-controller
+sudo apt-get install ros-melodic-trac-ik
+sudo apt-get install ros-melodic-ur-client-library
+sudo apt-get install ros-melodic-effort-controllers
+sudo apt-get install ros-melodic-warehouse-ros-mongo
+sudo apt-get install ros-melodic-velocity-controllers
+sudo apt-get install ros-melodic-twist-controller
+sudo apt-get install ros-melodic-industrial-robot-status
+sudo apt-get install ros-melodic-industrial-robot-status-controller
+sudo apt-get install ros-melodic-force-torque-sensor-controller
+sudo apt-get install ros-melodic-cartesian-trajectory-controller
+
 mkdir -p ~/ws_moveit/src
 cd ~/ws_moveit/src
 git clone https://github.com/ros-planning/moveit_tutorials.git -b melodic-devel
