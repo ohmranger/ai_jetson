@@ -7,6 +7,7 @@ sudo apt update
 sudo apt install network-manager
 sudo service NetworkManager start
 #sudo nmcli device wifi connect 'agv_wireless_2.4GHz' password '123456789'
+#sudo nmcli device wifi connect 'ohmranger' password '55555555'
 
 # Remove unnecessary software
 sudo apt remove -y thunderbird libreoffice-*
@@ -30,7 +31,7 @@ sudo apt clean -y
 # Install essential development tools and libraries
 sudo apt-get install -y git cmake libpython3-dev python3-numpy
 
-sudo apt install vino
+sudo apt install vino -y
 mkdir -p ~/.config/autostart
 cp /usr/share/applications/vino-server.desktop ~/.config/autostart
 
