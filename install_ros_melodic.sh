@@ -3,6 +3,8 @@
 # Copyright (c) 2020, ROBOTIS CO., LTD.
 #sudo timedatectl set-ntp false && timedatectl set-time "2025-01-12 22:30:00"
 #sudo timedatectl set-time "2025-01-09 15:30:00"
+#export DISPLAY:=0.0
+#/usr/lib/vino/vino-server
 
 sudo rm -rf /usr/local/cuda/samples \
 /usr/src/cudnn_samples_* \
