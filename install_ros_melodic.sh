@@ -1,7 +1,7 @@
 #!/bin/bash
 # Apache License 2.0
 # Copyright (c) 2020, ROBOTIS CO., LTD.
-#sudo timedatectl set-ntp false
+#sudo timedatectl set-ntp false && timedatectl set-time "2025-01-12 22:30:00"
 #sudo timedatectl set-time "2025-01-09 15:30:00"
 
 sudo rm -rf /usr/local/cuda/samples \
@@ -44,7 +44,7 @@ echo "[Environment setup and getting rosinstall]"
 source /opt/ros/$name_ros_version/setup.sh
 sudo apt install -y python3-rosinstall python3-rosinstall-generator python3-wstool build-essential git
 echo "[Install rosdep and Update]"
-sudo apt install python3-rosdep
+sudo apt install python3-rosdep -y
 echo "[Initialize rosdep and Update]"
 sudo sh -c "rosdep init"
 rosdep update
@@ -90,30 +90,7 @@ sudo apt-get install ros-melodic-franka-description -y
 sudo apt-get install ros-melodic-moveit-visual-tools -y
 sudo apt-get install ros-melodic-moveit-resources -y
 sudo apt-get install ros-melodic-joint-state-publisher -y
-sudo apt-get install ros-melodic-ur-msgs 
-sudo apt-get install ros-melodic-ur-dashboard-msgs 
 
-sudo apt-get install ros-melodic-trac-ik
-sudo apt-get install ros-melodic-ur-client-library
-sudo apt-get install ros-melodic-effort-controllers
-sudo apt-get install ros-melodic-warehouse-ros-mongo
-sudo apt-get install ros-melodic-velocity-controllers
-sudo apt-get install ros-melodic-twist-controller
-sudo apt-get install ros-melodic-industrial-robot-status
-sudo apt-get install ros-melodic-industrial-robot-status-controller
-sudo apt-get install ros-melodic-force-torque-sensor
-sudo apt-get install ros-melodic-force-torque-sensor-controller
-sudo apt-get install ros-melodic-cartesian-trajectory-controller
-sudo apt-get install ros-melodic-trac-ik
-sudo apt-get install ros-melodic-ur-client-library
-sudo apt-get install ros-melodic-effort-controllers
-sudo apt-get install ros-melodic-warehouse-ros-mongo
-sudo apt-get install ros-melodic-velocity-controllers
-sudo apt-get install ros-melodic-twist-controller
-sudo apt-get install ros-melodic-industrial-robot-status
-sudo apt-get install ros-melodic-industrial-robot-status-controller
-sudo apt-get install ros-melodic-force-torque-sensor-controller
-sudo apt-get install ros-melodic-cartesian-trajectory-controller
 
 mkdir -p ~/ws_moveit/src
 cd ~/ws_moveit/src
